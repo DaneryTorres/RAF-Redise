@@ -1,0 +1,986 @@
+// =============== import ==================
+
+@import "responsive";
+
+/* -----------------fonts-------------- */
+
+@font-face {
+  font-family: "neo-sans";
+  src: url(../font/NeoSan.ttf);
+}
+
+@font-face {
+  font-family: "neo-sans-bold";
+  src: url(../font/NeoSanBol.ttf);
+}
+
+@font-face {
+  font-family: "neo-sans-med";
+  src: url(../font/NeoSanMed.ttf);
+}
+p {
+  font-family: "neo-sans";
+  color: var(--gris-color);
+}
+/* --------------colores------------- */
+
+:root {
+  --rojo-color: #d7282f;
+  --gris-color: #707070;
+}
+/* ---------------estilo---------------- */
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gris-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--rojo-color);
+  border-radius: 16px;
+}
+/* ------------------------loader-------------------- */
+
+.svg-animation {
+  width: 150px;
+  height: 150px;
+  z-index: 1000;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 1;
+}
+
+.item-responsive:hover {
+  opacity: 0.8;
+}
+.navbar-fixed-top {
+  position: fixed;
+}
+
+.navbar {
+  z-index: 100;
+  position: fixed;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 70px;
+  background-color: var(--rojo-color);
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.267) 0px 0px 8px;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+h2 {
+  text-decoration: none;
+}
+
+.logo {
+  height: auto;
+}
+
+.item {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  width: 20%;
+  height: auto;
+  align-items: center;
+}
+
+// =================================Home=====================================
+#home {
+  z-index: 1;
+  height: auto;
+  width: 100%;
+  position: relative;
+  .gris{
+    width: 100% !important;
+    
+    height: 600px;
+    background-color: rgb(249, 249, 249);
+    border-bottom-left-radius: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    // margin-top: -60px;
+    z-index: 0;
+    @include responsive(desktop) {
+      border-bottom-left-radius: 200px;
+     height: 500px;
+    //  margin-top: -60px;
+      }
+    @include responsive(mobile) {
+      border-bottom-left-radius: 50px;
+     height: 300px;
+     margin-top: -60px;
+      }
+    @include responsive(small) {
+      border-bottom-left-radius: 100px;
+     height: 600px;
+     margin-top: -60px;
+      }
+      padding: 0px;
+      margin: 0px;
+      .lottiePrincipal{
+        
+        @include responsive(mobile) {
+         width: 100%;
+         
+          }
+        @include responsive(small) {
+         width: 100%;
+         
+          }
+    width: 50%;
+
+
+
+  
+
+  }
+}
+// background-image: url("../assets/arteUnoFondo-01.svg");
+// background-position: bottom;
+// background-repeat: no-repeat;
+// // background-attachment: fixed;
+// background-size: contain;
+.gris2{
+  background-color: rgb(249, 249, 249);
+  // background-color: hotpink;
+  width: 400px;
+  position: absolute;
+  height: 280px;
+  right: 0;
+  z-index: 0;
+  @include responsive(mobile) {
+    height: 150px;
+    }
+  @include responsive(small){
+    height: 150px;
+    }
+  @include responsive(desktop){
+    height: 150px;
+    }
+
+}
+  .containert {
+    position: relative;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+ height: 280px;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    align-items: center;
+    border-top-right-radius: 300px;
+    flex-direction: column;
+    z-index: 5 !important;
+    @include responsive(mobile) {
+      height: 150px;
+      border-top-right-radius: 50px;
+     
+      }
+    @include responsive(small) {
+      height: 150px;
+      border-top-right-radius: 100px;
+      justify-content: center;
+      align-items: center;
+     
+      }
+    @include responsive(desktop) {
+      height: 150px;
+      border-top-right-radius: 200px;
+      justify-content: center;
+      align-items: center;
+     
+      }
+      
+    
+    h1{
+      font-family: 'neo-sans-med';
+      font-size: 5rem;
+      color: var(--rojo-color);
+      margin-top: 30px;
+      @include responsive(mobile) {
+        font-size: 1.8rem;
+        margin-top: 10px;
+        width: 90%;
+      }
+      @include responsive(small) {
+        font-size: 3rem;
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+      }
+      @include responsive(desktop) {
+        font-size: 3rem;
+        margin-top: 0px;
+       
+       //  margin-top: -60px;
+         }
+    }
+    p{
+      font-family: 'neo-sans';
+      color: var(--rojo-color);
+      font-size: 2rem;
+      @include responsive(mobile) {
+        font-size: 1rem;
+        width: 90%;
+        text-align: center;
+             }
+      @include responsive(small) {
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+             }
+
+    }
+   
+    
+ 
+  }
+}
+// ================desde====================
+
+#Desde {
+  h1 {
+    font-family: "neo-sans-med";
+    font-size: 40px;
+    color: white;
+    background-color: var(--rojo-color);
+    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 9px;
+  }
+  margin-top: 50px;
+  z-index: 99;
+  text-align: center;
+
+  .unoDos {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    .opciones {
+      width: 300px;
+      img {
+        width: 70px;
+      }
+
+      p {
+        margin-top: 10px;
+        text-align: center;
+      }
+    }
+  }
+  h2 {
+    margin-top: 40px;
+    font-family: "neo-sans-med";
+    font-size: 40px;
+    color: var(--rojo-color);
+  }
+  .contenedor {
+    margin-top: 70px;
+    height: auto;
+    display: flex;
+
+    .listadepasos {
+      width: 50%;
+      display: flex;
+      height: auto;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .nota {
+        border: 1px var(--rojo-color) solid;
+        border-radius: 9px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        height: auto;
+        p {
+          text-align: justify;
+          margin-top: 0px;
+        }
+      }
+      .content {
+        height: auto;
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        align-items: flex-start;
+        .icono {
+          width: 50px;
+          transform: translateY(-8px);
+        }
+        .tex {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+          text-align: justify;
+          width: 100%;
+          height: 100%;
+          padding-left: 5px;
+          text-align: start;
+          ul {
+            li {
+              font-family: "neo-sans";
+              color: var(--gris-color);
+              text-align: justify;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// =================================tRASNANCA=====================================
+
+#TrasBanca {
+  .nota {
+    .nota {
+      border: 1px var(--rojo-color) solid;
+      border-radius: 9px;
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      margin: auto;
+      margin-top: 50px;
+      height: 50px;
+      p {
+        margin-top: 0px;
+        margin: auto;
+      }
+    }
+  }
+  h1 {
+    font-family: "neo-sans-med";
+    font-size: 40px;
+    color: white;
+    background-color: var(--rojo-color);
+    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 9px;
+  }
+  margin-top: 50px;
+  text-align: center;
+  p {
+    text-align: justify;
+    font-family: "neo-sans";
+    color: var(--gris-color);
+    margin-top: 50px;
+  }
+  .contenidotextimg {
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    height: 400px;
+    .contenido-img-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 50%;
+      .content {
+        display: flex;
+        .tex {
+          text-align: justify;
+          p {
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+  }
+  .nota {
+    border: 1px var(--rojo-color) solid;
+    border-radius: 9px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    height: 50px;
+    p {
+      margin-top: 0px;
+      margin: auto;
+    }
+  }
+}
+.notab {
+  display: none !important;
+  border: 1px var(--rojo-color) solid;
+  border-radius: 9px;
+  padding: 5px;
+  margin-top: 50px;
+  width: 100%;
+
+
+  height: auto;
+
+  p {
+    margin-top: 5px   !important;
+   text-align: center;
+  }
+}
+
+.lottie{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include responsive(mobile) {
+    width: 100%;
+    lottie-player{
+      width: 350px;
+      height: 350px;
+      margin-bottom: 20px;
+    }
+  }
+}
+// ==============================Debitos=====================================
+#debitos {
+  text-align: center;
+  h1 {
+    margin-top: 50px;
+    font-family: "neo-sans-med";
+    font-size: 40px;
+    color: white;
+    background-color: var(--rojo-color);
+    padding: 5px;
+
+    border-radius: 9px;
+  }
+  p {
+    margin-top: 50px;
+    text-align: justify;
+  }
+  .contenidotextimg {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 400px;
+    .contenido-img-text {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: space-between;
+      width: 50%;
+      .content {
+        display: flex;
+        .tex {
+          text-align: justify;
+          p {
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+// =================================Contactanos====================================
+.botonco {
+  display: block;
+}
+.boton {
+  display: none;
+  // margin: auto;
+  // height: 40px;
+  // font-family: "neo-sans-med";
+  // background-color: var(--rojo-color) !important;
+  // border-radius: 9px;
+  // border: none;
+
+  // width: 150px;
+
+  // a {
+  //   color: white;
+  // }
+  // &:hover {
+  //   background-color: white;
+
+  // }
+}
+// #contactanos .contenedr .cont button a {
+//   color: #ffffff !important;
+
+//   :hover {
+//     color: var(--rojo-color) !important;
+//   }
+// }
+button {
+  margin: auto;
+  height: 40px;
+  font-family: "neo-sans-med";
+  background-color: var(--rojo-color);
+  border-radius: 9px;
+  border: none;
+  color: white;
+  width: 150px;
+  &:hover {
+    background-color: white;
+    color: var(--rojo-color);
+  }
+  a {
+    color: white !important;
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    &:hover {
+      color: var(--rojo-color) !important;
+    }
+  }
+}
+.tf {
+  transform: translateY(-10px);
+}
+#contactanos {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  height: 400px;
+  text-align: center;
+  background-image: url("../assets/fondocontac.png");
+  background-position: center;
+  background-size: cover;
+  h1 {
+    font-family: "neo-sans-med";
+    background-color: var(--rojo-color);
+    margin: 10px;
+    border-radius: 9px;
+    font-size: 30px;
+    width: 310px;
+    margin: auto;
+    color: white;
+  }
+  p {
+    margin-top: 20px;
+    color: white;
+    text-align: justify;
+  }
+  .contenedr {
+    h4 {
+      font-family: "neo-sans";
+    }
+    .cont {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      .Correo,
+      .App {
+        width: 150px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+#contactanos .contenedr .cont button a {
+  color: #d7282f;
+}
+
+// .blur{
+//   width: 100%;
+//   height: 400px;
+//   filter: blur(6px) black;
+//     background-image: url("https://images.unsplash.com/photo-1584847108039-bf217e06885e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80");;
+//   background-position: center;
+//   background-size: cover;
+//   position: absolute;
+
+// }
+// =================================footer=====================================
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #c41f26;
+ 
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  .footer {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--rojo-color);
+    h3 {
+      font-family: "neo-sans";
+      color: white;
+    }
+  }
+}
+  .notatarjeta {
+    border: 1px var(--rojo-color) solid;
+    border-radius: 9px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+
+    height: auto;
+    p{
+      margin-top: 5px !important;
+      margin-bottom: 5px !important;
+      margin: auto;
+    }
+  }
+// ===============================Responsive==================================
+
+@include responsive(mobile) {
+  .tf {
+    transform: translateY(-8px);
+  }
+  .unoss {
+    img {
+      width: 40px !important;
+    }
+  }
+  .notab {
+    display: block !important;
+  }
+  .svg-animation {
+    width: 100px;
+    height: 100px;
+  }
+  /* -------------Navbar------------- */
+  .navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    width: 180px;
+    height: auto;
+  }
+  .logo-responsive {
+    width: 100%;
+  }
+  .item-responsive {
+    width: 25px;
+    height: auto;
+  }
+  .item {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    width: 50%;
+    height: auto;
+    align-items: center;
+  }
+
+  #home {
+    width: 95%;
+    padding-top: 100px;
+    height: auto;
+    margin: auto;
+    background-image: none;
+    .container {
+      transform: translateX(1px) !important;
+      height: auto;
+      width: 100%;
+      margin-left: 0px;
+      flex-direction: column;
+
+      .text {
+        width: 100%;
+        h1 {
+          font-size: 26px;
+        }
+      }
+      .imagen {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  #Desde {
+    width: 100%;
+    h1 {
+      font-size: 26px;
+    }
+
+    .unoDos {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      .opciones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        img {
+          width: 40px;
+        }
+        p {
+          text-align: center;
+        }
+      }
+    }
+    h2 {
+      font-size: 26px;
+    }
+    .contenedor {
+      flex-direction: column;
+      .listadepasos {
+        width: 100%;
+        height: auto !important;
+      }
+    }
+  }
+
+  #TrasBanca {
+    width: 95%;
+    h1 {
+      font-size: 26px;
+    }
+    .contenidotextimg {
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+
+      .contenido-img-text {
+        width: 100% !important;
+      }
+    }
+    .nota {
+      width: 100%;
+      height: 100px;
+      display: none;
+    }
+    .ilustracion {
+      width: 100%;
+      background-size: cover;
+    }
+  }
+
+  #debitos {
+    width: 95%;
+    h1 {
+      font-size: 26px;
+    }
+    .contenidotextimg {
+      flex-direction: column-reverse;
+      height: auto;
+      width: 100%;
+
+      .contenido-img-text {
+        width: 100% !important;
+        .content {
+          margin-bottom: 10px;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .icono {
+            img {
+              width: 40px;
+            }
+          }
+          .tex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+
+    .ilustracion {
+      width: 60%;
+      margin: auto;
+      background-size: cover;
+      margin-bottom: 50px;
+    }
+  }
+
+  #contactanos {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: auto;
+
+    .contenedr {
+      .boton {
+        display: block;
+      }
+      .cont {
+        padding-top: 20px;
+        flex-direction: column;
+        .botonco {
+          display: none;
+        }
+        .Correo {
+          .correoimg {
+            width: 100px;
+          }
+        }
+        .App {
+          .celimg {
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  // =================================footer=====================================
+  footer {
+    margin-top: 0px;
+    text-align: center;
+    .footer {
+      height: 80px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--rojo-color);
+      h3 {
+        font-family: "neo-sans";
+        color: white;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@include responsive(small) {
+ 
+  .svg-animation {
+    width: 100px;
+    height: 100px;
+  }
+  .nota {
+    display: block !important;
+  }
+  /* -------------Navbar------------- */
+  .navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    width: 180px;
+    height: auto;
+  }
+  .logo-responsive {
+    width: 100%;
+  }
+  .item-responsive {
+    width: 25px;
+    height: auto;
+  }
+  .item {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    width: 50%;
+    height: auto;
+    align-items: center;
+  }
+
+  #home {
+    width: 100%;
+    padding-top: 100px;
+    height: auto;
+    margin: auto;
+    background-image: none;
+    .container {
+      transform: translateX(1px) !important;
+      height: auto;
+      width: 100%;
+      margin-left: 0px;
+      flex-direction: column;
+
+      .text {
+        width: 100%;
+        h1 {
+          font-size: 26px;
+        }
+      }
+      .imagen {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  #TrasBanca .nota {
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+  }
+}
+
+@include responsive(desktop) {
+  #TrasBanca .nota {
+    display: none !important;
+  }
+  /* -------------Navbar------------- */
+  .navbar {
+    height: 70px;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  #home .container {
+    transform: translateX(0px);
+  }
+}
