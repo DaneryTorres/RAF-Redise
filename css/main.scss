@@ -127,23 +127,23 @@ h2 {
     align-items: flex-end;
     // margin-top: -60px;
     z-index: 0;
+    @include responsive(mobile) {
+      border-bottom-left-radius: 50px !important;
+      height: 300px !important;
+      // margin-top: -60px;
+    }
+    @include responsive(small) {
+      border-bottom-left-radius: 100px;
+      height: 600px;
+      margin-top: -60px;
+    }
     @include responsive(desktop) {
       border-bottom-left-radius: 200px;
      height: 500px;
     //  margin-top: -60px;
       }
-    @include responsive(mobile) {
-      border-bottom-left-radius: 50px;
-     height: 300px;
-     margin-top: -60px;
-      }
-    @include responsive(small) {
-      border-bottom-left-radius: 100px;
-     height: 600px;
-     margin-top: -60px;
-      }
-      padding: 0px;
-      margin: 0px;
+    padding: 0px;
+    margin: 0px;
       .lottiePrincipal{
         
         @include responsive(mobile) {
@@ -176,7 +176,7 @@ h2 {
   right: 0;
   z-index: 0;
   @include responsive(mobile) {
-    height: 150px;
+    height: 150px !important;
     }
   @include responsive(small){
     height: 150px;
@@ -199,8 +199,8 @@ h2 {
     flex-direction: column;
     z-index: 5 !important;
     @include responsive(mobile) {
-      height: 150px;
-      border-top-right-radius: 50px;
+      height: 150px !important;
+      border-top-right-radius: 50px !important;
      
       }
     @include responsive(small) {
@@ -225,9 +225,9 @@ h2 {
       color: var(--rojo-color);
       margin-top: 30px;
       @include responsive(mobile) {
-        font-size: 1.8rem;
-        margin-top: 10px;
-        width: 90%;
+        font-size: 1.8rem !important;
+        margin-top: 10px !important;
+        width: 90% !important;
       }
       @include responsive(small) {
         font-size: 3rem;
