@@ -209,204 +209,209 @@ h2 {
           align-items: center;
 }
 
+.item a {
+  margin-left: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
 #home {
   z-index: 1;
-  height: auto;
+  height: 100vh;
   width: 100%;
   position: relative;
-}
-
-#home .gris {
-  width: 100% !important;
-  height: 600px;
-  background-color: #f9f9f9;
-  border-bottom-left-radius: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  z-index: 0;
-  padding: 0px;
-  margin: 0px;
-}
-
-@media only screen and (max-width: 599px) {
-  #home .gris {
-    border-bottom-left-radius: 50px !important;
-    height: 300px !important;
-  }
-}
-
-@media only screen and (max-width: 991px) {
-  #home .gris {
-    border-bottom-left-radius: 100px;
-    height: 600px;
-    margin-top: -60px;
-  }
-}
-
-@media only screen and (max-width: 1460px) {
-  #home .gris {
-    border-bottom-left-radius: 200px;
-    height: 500px;
-  }
-}
-
-#home .gris .lottiePrincipal {
-  width: 50%;
-}
-
-@media only screen and (max-width: 599px) {
-  #home .gris .lottiePrincipal {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 991px) {
-  #home .gris .lottiePrincipal {
-    width: 100%;
-  }
-}
-
-#home .gris2 {
-  background-color: #f9f9f9;
-  width: 400px;
-  position: absolute;
-  height: 280px;
-  right: 0;
-  z-index: 0;
-}
-
-@media only screen and (max-width: 599px) {
-  #home .gris2 {
-    height: 150px !important;
-  }
-}
-
-@media only screen and (max-width: 991px) {
-  #home .gris2 {
-    height: 150px;
-  }
-}
-
-@media only screen and (max-width: 1460px) {
-  #home .gris2 {
-    height: 150px;
-  }
-}
-
-#home .containert {
-  position: relative;
-  margin: auto;
-  background-color: white;
-  height: 280px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 0px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-top-right-radius: 300px;
+  background-image: url("../assets/arteUnoFondo-01.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-color: #fcfcfc;
+}
+
+@media only screen and (max-width: 599px) {
+  #home {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    background-color: white;
+    height: auto;
+  }
+}
+
+#home .wrap-texto-principal {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  z-index: 5 !important;
+  margin-left: 100px;
+  height: 50%;
 }
 
-@media only screen and (max-width: 599px) {
-  #home .containert {
-    height: 150px !important;
-    border-top-right-radius: 50px !important;
-  }
-}
-
-@media only screen and (max-width: 991px) {
-  #home .containert {
-    height: 150px;
-    border-top-right-radius: 100px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-@media only screen and (max-width: 1460px) {
-  #home .containert {
-    height: 150px;
-    border-top-right-radius: 200px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-#home .containert h1 {
+#home .wrap-texto-principal h1 {
   font-family: 'neo-sans-med';
-  font-size: 5rem;
   color: var(--rojo-color);
-  margin-top: 30px;
+  font-size: 40px;
+  line-height: 60px;
 }
 
 @media only screen and (max-width: 599px) {
-  #home .containert h1 {
-    font-size: 1.8rem !important;
-    margin-top: 10px !important;
-    width: 90% !important;
+  #home .wrap-texto-principal {
+    width: 100%;
+    margin-left: 0px;
+  }
+  #home .wrap-texto-principal h1 {
+    margin-top: 30px;
+    font-size: 26px;
+    text-align: center;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+  #home .wrap-texto-principal p {
+    text-align: center;
   }
 }
 
-@media only screen and (max-width: 991px) {
-  #home .containert h1 {
-    font-size: 3rem;
-    margin-top: 10px;
-    text-align: center;
+#home .lottiePrincipal {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100%;
+}
+
+@media only screen and (max-width: 599px) {
+  #home .lottiePrincipal {
     width: 100%;
   }
 }
 
-@media only screen and (max-width: 1460px) {
-  #home .containert h1 {
-    font-size: 3rem;
-    margin-top: 0px;
-  }
-}
-
-#home .containert p {
-  font-family: 'neo-sans';
-  color: var(--rojo-color);
-  font-size: 2rem;
+#home .lottiePrincipal .lotie-content {
+  width: 45%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
 }
 
 @media only screen and (max-width: 599px) {
-  #home .containert p {
-    font-size: 1rem;
+  #home .lottiePrincipal .lotie-content {
+    width: 100%;
+    position: relative;
+  }
+}
+
+#ovp {
+  margin-top: 100px;
+  z-index: 2;
+  text-align: center;
+}
+
+@media only screen and (max-width: 599px) {
+  #ovp {
+    margin-top: 20px;
+  }
+}
+
+#ovp h1 {
+  font-family: "neo-sans-med";
+  font-size: 40px;
+  color: white;
+  background-color: var(--rojo-color);
+  padding: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 9px;
+}
+
+@media only screen and (max-width: 599px) {
+  #ovp h1 {
+    font-size: 26px;
+  }
+}
+
+#ovp .con-tex-video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+
+#ovp .con-tex-video iframe {
+  border-radius: 19px;
+}
+
+@media only screen and (max-width: 599px) {
+  #ovp .con-tex-video iframe {
+    font-size: 26px;
     width: 90%;
-    text-align: center;
+    height: 200px;
   }
 }
 
-@media only screen and (max-width: 991px) {
-  #home .containert p {
-    font-size: 1rem;
-    width: 100%;
-    text-align: center;
-  }
+.direccion-home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.direccion-home ul {
+  color: var(--gris-color);
+}
+
+.direccion-home ul h3 {
+  font-family: 'neo-sans-med';
+  font-size: 120%;
+}
+
+.direccion-home ul li {
+  font-family: 'neo-sans';
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
 }
 
 #Desde {
@@ -850,15 +855,17 @@ button a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
+  font-size: 100%;
+  margin-top: 30px;
 }
 
 #contactanos .contenedr .cont .Correo,
 #contactanos .contenedr .cont .App {
-  width: 150px;
+  width: 200px;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1159,6 +1166,12 @@ footer .footer h3 {
     display: block;
   }
   #contactanos .contenedr .cont {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-top: 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

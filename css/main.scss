@@ -108,163 +108,164 @@ h2 {
   width: 20%;
   height: auto;
   align-items: center;
+  a{
+    margin-left: 5px;
+  }
 }
-
+a{
+  text-decoration: none;
+}
 // =================================Home=====================================
 #home {
   z-index: 1;
-  height: auto;
+  height: 100vh;
   width: 100%;
   position: relative;
-  .gris{
-    width: 100% !important;
-    
-    height: 600px;
-    background-color: rgb(249, 249, 249);
-    border-bottom-left-radius: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    // margin-top: -60px;
-    z-index: 0;
-    @include responsive(mobile) {
-      border-bottom-left-radius: 50px !important;
-      height: 300px !important;
-      // margin-top: -60px;
-    }
-    @include responsive(small) {
-      border-bottom-left-radius: 100px;
-      height: 600px;
-      margin-top: -60px;
-    }
-    @include responsive(desktop) {
-      border-bottom-left-radius: 200px;
-     height: 500px;
-    //  margin-top: -60px;
-      }
-    padding: 0px;
-    margin: 0px;
-      .lottiePrincipal{
-        
-        @include responsive(mobile) {
-         width: 100%;
-         
-          }
-        @include responsive(small) {
-         width: 100%;
-         
-          }
-    width: 50%;
+  display: flex;
+justify-content: center;
+align-items: center;
+background-image: url("../assets/arteUnoFondo-01.svg");
+background-position: bottom;
+background-repeat: no-repeat;
+background-color: rgb(252, 252, 252);
+@include responsive(mobile) {
+  flex-direction: column-reverse;
+background-color: white;
+  height: auto;
 
-
-
-  
-
-  }
 }
-// background-image: url("../assets/arteUnoFondo-01.svg");
-// background-position: bottom;
-// background-repeat: no-repeat;
-// // background-attachment: fixed;
-// background-size: contain;
-.gris2{
-  background-color: rgb(249, 249, 249);
-  // background-color: hotpink;
-  width: 400px;
-  position: absolute;
-  height: 280px;
-  right: 0;
-  z-index: 0;
+.wrap-texto-principal{
+width: 40%;
+display: flex;
+justify-content: center;
+flex-direction: column;
+margin-left: 100px;
+
+height: 50%;
+
+
+h1{
+  font-family: 'neo-sans-med';
+  color: var(--rojo-color);
+  font-size: 40px;
+  line-height: 60px;
+}
+@include responsive(mobile) {
+  width: 100%;
+  h1{
+    margin-top: 30px;
+    font-size: 26px;
+    text-align: center;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+  p{
+    text-align: center;
+  }
+  margin-left: 0px;
+}
+}
+.lottiePrincipal{
+  width: 45%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100%;
   @include responsive(mobile) {
-    height: 150px !important;
-    }
-  @include responsive(small){
-    height: 150px;
-    }
-  @include responsive(desktop){
-    height: 150px;
-    }
+    width: 100%;
+    
+    
+  }
+  
+  .lotie-content{
+
+
+  width: 45%;
+  position: absolute; 
+  bottom: 0px;
+  right: 0px;
+  @include responsive(mobile) {
+                      width: 100%;
+                      position: relative;
+                    
+                      
+                    }
+                  }
 
 }
-  .containert {
-    position: relative;
-    margin: auto;
-    background-color: rgb(255, 255, 255);
- height: 280px;
-    display: flex;
-    justify-content: center;
-    margin-top: 0px;
-    align-items: center;
-    border-top-right-radius: 300px;
-    flex-direction: column;
-    z-index: 5 !important;
-    @include responsive(mobile) {
-      height: 150px !important;
-      border-top-right-radius: 50px !important;
-     
-      }
-    @include responsive(small) {
-      height: 150px;
-      border-top-right-radius: 100px;
-      justify-content: center;
-      align-items: center;
-     
-      }
-    @include responsive(desktop) {
-      height: 150px;
-      border-top-right-radius: 200px;
-      justify-content: center;
-      align-items: center;
-     
-      }
-      
-    
-    h1{
-      font-family: 'neo-sans-med';
-      font-size: 5rem;
-      color: var(--rojo-color);
-      margin-top: 30px;
-      @include responsive(mobile) {
-        font-size: 1.8rem !important;
-        margin-top: 10px !important;
-        width: 90% !important;
-      }
-      @include responsive(small) {
-        font-size: 3rem;
-        margin-top: 10px;
-        text-align: center;
-        width: 100%;
-      }
-      @include responsive(desktop) {
-        font-size: 3rem;
-        margin-top: 0px;
-       
-       //  margin-top: -60px;
-         }
-    }
-    p{
-      font-family: 'neo-sans';
-      color: var(--rojo-color);
-      font-size: 2rem;
-      @include responsive(mobile) {
-        font-size: 1rem;
-        width: 90%;
-        text-align: center;
-             }
-      @include responsive(small) {
-        font-size: 1rem;
-        width: 100%;
-        text-align: center;
-             }
 
-    }
-   
-    
- 
-  }
 }
 // ================desde====================
+#ovp{
+  margin-top: 100px;
+  z-index: 2;
+  text-align: center;
+  @include responsive(mobile) {
+    
+    margin-top: 20px;
+    
+   
+   }
+  h1 {
+    font-family: "neo-sans-med";
+    font-size: 40px;
+    color: white;
+    background-color: var(--rojo-color);
+    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 9px;
+    @include responsive(mobile) {
+     font-size: 26px;
 
+    
+    }
+  }
+  .con-tex-video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    iframe{
+      border-radius: 19px;
+      @include responsive(mobile) {
+        font-size: 26px;
+        width: 90%;
+        height: 200px;
+       
+       }
+    }
+  
+  }
+}
+
+.direccion-home{
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-top: 40px;
+  margin-bottom: 30px;
+ flex-wrap: wrap;
+    width: 100%;
+    max-width: 1100px;
+
+
+  ul{
+    color: var(--gris-color);
+    h3{
+font-family: 'neo-sans-med';
+font-size: 120%;
+  }
+  li{
+    font-family: 'neo-sans';
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+
+  }
+}
 #Desde {
   h1 {
     font-family: "neo-sans-med";
@@ -603,11 +604,14 @@ button {
     .cont {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       width: 100%;
+      font-size: 100%;
+      margin-top: 30px;
+      
       .Correo,
       .App {
-        width: 150px;
+        width: 200px;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -736,6 +740,7 @@ footer {
         width: 100%;
         h1 {
           font-size: 26px;
+        
         }
       }
       .imagen {
@@ -856,6 +861,8 @@ footer {
         display: block;
       }
       .cont {
+        align-items: center;
+        justify-content: center;
         padding-top: 20px;
         flex-direction: column;
         .botonco {
